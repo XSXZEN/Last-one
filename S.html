@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: #ffffff; /* White background for the entire page */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #b30000; /* Pink background */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .hearts {
+            font-size: 50px;
+            color: #ffffff;
+            animation: heartBeat 1.5s infinite;
+        }
+        @keyframes heartBeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .video-section, .story-section, .voice-message {
+            margin: 20px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 2px solid #ff66b2;
+        }
+        .video-section video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #ff66b2;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .video-section video.fullscreen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .download-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .download-icon img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="hearts">Happy Birthday Daddy</h1>
+        </div>
+        <div class="video-section">
+            <h2></h2>
+            <video id="video" controls>
+                <source src="c:\Users\Lenovo\Music\VID_72530621_012309_783.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a class="download-icon" href="c:\Users\Lenovo\Music\VID_72530621_012309_783.mp4" download>
+                <img src="download-icon.png" alt="Download">
+            </a>
+        </div>
+        <div class="story-section">
+            
+            <p>
+             <h2> i love you</h2>
+            </p>
+        </div>
+        <div class="voice-message">
+            <h2>Voice Message</h2>
+            <audio controls>
+                <source src="c:\Users\Lenovo\Music\Standard recording 33.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        video.addEventListener('click', function() {
+            video.classList.toggle('fullscreen');
+        });
+    </script>
+</body>
+</html>
